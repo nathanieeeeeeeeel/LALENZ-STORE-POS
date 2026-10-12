@@ -28,16 +28,19 @@ The v1.0.2 production application maintains the following stable interface and s
 
 ## Directory & File Structure
 
+```text
 LALENZ-SARISARI-POS/
 ├── docs/                      # Technical specs, schema diagrams, and architecture guides
 ├── database/
+│   ├── archives/              # Compressed snapshot archives (.rar, .zip)
 │   ├── migrations/            # Version-controlled SQL schema migration scripts
-│   └── snapshots/             # End-of-Day (EOD) application and SQL database snapshots
+│   └── snapshots/             # End-of-Day (EOD) JSON and SQL database snapshots
 ├── src/                       # Application source code
 │   ├── assets/                # Static CSS (Shared theme.css), JavaScript, and media
 │   └── templates/             # HTML views and core application interfaces
 ├── .gitignore                 # Excluded environments, build artifacts, and temp files
 └── README.md                  # Main documentation (this file)
+```
 
 ---
 
