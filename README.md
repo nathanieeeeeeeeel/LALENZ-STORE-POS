@@ -30,16 +30,47 @@ The v1.0.2 production application maintains the following stable interface and s
 
 ```text
 LALENZ-SARISARI-POS/
-├── docs/                      # Technical specs, schema diagrams, and architecture guides
-├── database/
-│   ├── archives/              # Compressed snapshot archives (.rar, .zip)
-│   ├── migrations/            # Version-controlled SQL schema migration scripts
-│   └── snapshots/             # End-of-Day (EOD) JSON and SQL database snapshots
-├── src/                       # Application source code
-│   ├── assets/                # Static CSS (Shared theme.css), JavaScript, and media
-│   └── templates/             # HTML views and core application interfaces
-├── .gitignore                 # Excluded environments, build artifacts, and temp files
-└── README.md                  # Main documentation (this file)
+├── admin/
+│   ├── users/
+│   │   ├── _bootstrap.php    # Initializes shared dependencies, database connection, and user management setup
+│   │   ├── _footer.php       # Shared footer layout for user management pages
+│   │   ├── _header.php       # Shared header layout and navigation for user management pages
+│   │   ├── create.php        # Creates new POS system user accounts
+│   │   ├── delete.php        # Handles deletion of existing user accounts
+│   │   ├── index.php         # Displays and manages the list of user accounts
+│   │   ├── modify.php        # Updates existing user account information
+│   │   ├── permissions.php   # Manages user permissions and access privileges
+│   │   └── roles.php         # Manages user roles and role assignments
+│   └── action-logs.php       # Displays administrative activity and action logs
+├── api/
+│   └── ...
+├── assets/
+│   └── ...
+├── CHANGELOGS/
+│   └── ...
+├── config/
+│   └── ...
+├── includes/
+│   └── ...
+│   
+├── admin.php              # Administrative dashboard and system administration functions
+├── catgories.php          # Displays and manages product categories
+├── category_add.php       # Adds new product categories
+├── category_edit.php      # Edits existing product category information
+├── customers.php          # Manages customer records and customer information
+├── dashboard.php          # Displays POS dashboard metrics and business summaries
+├── expenses.php            # Records and manages store expenses
+├── index.php               # Main application entry point
+├── item-summary.php        # Displays item-level sales summaries and product performance
+├── login.php               # Handles user authentication and login
+├── pos.php                 # Provides the point-of-sale interface for processing transactions
+├── products.php            # Manages product records, prices, and inventory information
+├── reports.php             # Generates sales, financial, and operational reports
+├── sales.php               # Displays and manages sales transaction records
+├── settings.php            # Manages application settings and system preferences
+│
+├── .gitignore              # Excludes specified environments, build artifacts, and temporary files from Git
+└── README.md               # Main project documentation, setup instructions, and system overview
 ```
 
 ---
