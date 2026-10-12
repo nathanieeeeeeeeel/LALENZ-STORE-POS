@@ -1,0 +1,22 @@
+# Changelog - 10-10-2026
+
+- Added product audit columns for creation time, last-modified time, and the user who last modified each product.
+- Updated product creation and edits, plus POS stock deductions, to record the responsible user and modification timestamp.
+- Assigned category-based SKUs to the 110 products that were missing them, preserving existing SKUs. Verified all 161 products have distinct, non-empty SKUs.
+- Confirmed product creation and editing check for duplicate SKUs, with the database unique index providing a final safeguard.
+- Added an admin-only Action Logs page with filters for products, categories, sales, and settings; entries include the user, timestamp, target, outcome, and details.
+- Paginated Action Logs to show 10 entries per page while retaining the active filters.
+- Added numbered page buttons to Action Logs pagination.
+- Kept Previous and Next controls visible and disabled at the first and last pages.
+- Logged successful and failed product creation, edits, and deletions; category creation and edits; POS sale creation and sale edits; and settings actions including general settings, logo resets, password changes, backup exports, and restores.
+- Included settings validation, permission, and session-verification failures in the logs without recording passwords or backup contents.
+- Updated the application footer version to 1.0.1-10102026 and added the shared footer to rendered pages that were missing it.
+- Added Tippy.js tooltips throughout the sidebar and a persistent desktop collapse toggle that reduces navigation to icons and the store logo.
+- Expanded product descriptions from the database's 255-character limit to TEXT storage and raised the add/edit form limit to 5,000 characters to prevent saved descriptions from being truncated.
+- Automatically generate a category-prefixed SKU for new products and legacy products without a SKU, continuing after that category's highest existing matching SKU while preserving existing SKU assignments.
+- Truncate expense details in the history table and add a View Details modal for reading the complete text alongside expense metadata.
+- Log successful and failed expense creation, updates, and deletions in the admin Action Logs, with an Expenses filter.
+- Apply the saved collapsed-sidebar state and layout styles immediately on page load to prevent expanded-width flicker during navigation.
+- Route the root index URL directly to the Dashboard for authenticated users and Login for unauthenticated users; update application links to use those destinations.
+- Add optional customer name/contact and a transaction note to POS checkout and sales details. Notes can record context such as a partial-payment arrangement but do not alter payment validation or track balances.
+- Use Tailwind width and transform transition utilities to smoothly slide the sidebar when it collapses or expands, while keeping main content in sync and respecting reduced-motion preferences.
