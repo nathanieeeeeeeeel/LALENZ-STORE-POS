@@ -28,6 +28,30 @@ The v1.0.2 production application maintains the following stable interface and s
 
 ## Directory & File Structure
 ```
+LALENZ-SARISARI-POS/
+├── admin/
+│   ├── users/
+│   │   ├── _bootstrap.php    # Initializes shared dependencies, database connection, and user management setup
+│   │   ├── _footer.php       # Shared footer layout for user management pages
+│   │   ├── _header.php       # Shared header layout and navigation for user management pages
+│   │   ├── create.php        # Creates new POS system user accounts
+│   │   ├── delete.php        # Handles deletion of existing user accounts
+│   │   ├── index.php         # Displays and manages the list of user accounts
+│   │   ├── modify.php        # Updates existing user account information
+│   │   ├── permissions.php   # Manages user permissions and access privileges
+│   │   └── roles.php         # Manages user roles and role assignments
+│   └── action-logs.php       # Displays administrative activity and action logs
+├── api/
+│   └── ...
+├── assets/
+│   └── ...
+├── CHANGELOGS/
+│   └── ...
+├── config/
+│   └── ...
+├── includes/
+│   └── ...
+│   
 ├── admin.php              # Administrative dashboard and system administration functions
 ├── catgories.php          # Displays and manages product categories
 ├── category_add.php       # Adds new product categories
