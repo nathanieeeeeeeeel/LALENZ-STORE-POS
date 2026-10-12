@@ -27,7 +27,7 @@ The v1.0.2 production application maintains the following stable interface and s
 ---
 
 ## Directory & File Structure
-
+```
 LALENZ-SARISARI-POS/
 ├── docs/                      # Technical specs, schema diagrams, and architecture guides
 ├── database/
@@ -38,7 +38,7 @@ LALENZ-SARISARI-POS/
 │   └── templates/             # HTML views and core application interfaces
 ├── .gitignore                 # Excluded environments, build artifacts, and temp files
 └── README.md                  # Main documentation (this file)
-
+```
 ---
 
 ## Database Architecture & Continuity Standards
